@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{092CBD8D-F46A-4B3F-BF35-FC01EE08F3E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Software_Engeerning_2_Course_work</RootNamespace>
+    <AssemblyName>Software_Engeerning_2_Course_work</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>packages\FluentValidation.10.4.0\lib\netstandard2.0\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="Controller\CommentsController.cs" />
+    <Compile Include="Controller\ProjectController.cs" />
+    <Compile Include="Controller\SubTaskController.cs" />
+    <Compile Include="Controller\TaskController.cs" />
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayoutFormatter.cs" />
+    <Compile Include="Models\Comment.cs" />
+    <Compile Include="Models\Project.cs" />
+    <Compile Include="Models\SubTask.cs" />
+    <Compile Include="Models\Tasks.cs" />
+    <Compile Include="Models\Users.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendMail.cs" />
+    <Compile Include="validators\ProjectValidator.cs" />
+    <Compile Include="validators\SubTaskValidator.cs" />
+    <Compile Include="validators\TaskValidator.cs" />
+    <Compile Include="validators\UserValidator.cs" />
+    <Compile Include="View\AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\comments\Comments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\comments\Comments.Designer.cs">
+      <DependentUpon>Comments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainDashboard.Designer.cs">
+      <DependentUpon>MainDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\subTask\SubTaskAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\subTask\SubTaskAdd.Designer.cs">
+      <DependentUpon>SubTaskAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\subTask\SubTaskView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\subTask\SubTaskView.Designer.cs">
+      <DependentUpon>SubTaskView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\task\TaskAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\task\TaskAdd.Designer.cs">
+      <DependentUpon>TaskAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\task\TaskView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\task\TaskView.Designer.cs">
+      <DependentUpon>TaskView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TreeView.Designer.cs">
+      <DependentUpon>TreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\user\MainDashboard_OLD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\user\MainDashboard_OLD.Designer.cs">
+      <DependentUpon>MainDashboard_OLD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\project\ProjectAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\project\ProjectAdd.Designer.cs">
+      <DependentUpon>ProjectAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\project\ProjectView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\project\ProjectView.Designer.cs">
+      <DependentUpon>ProjectView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\user\UserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\user\UserAdd.Designer.cs">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\user\UserView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\user\UserView.Designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\comments\Comments.resx">
+      <DependentUpon>Comments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainDashboard.resx">
+      <DependentUpon>MainDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\subTask\SubTaskAdd.resx">
+      <DependentUpon>SubTaskAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\subTask\SubTaskView.resx">
+      <DependentUpon>SubTaskView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\task\TaskAdd.resx">
+      <DependentUpon>TaskAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\task\TaskView.resx">
+      <DependentUpon>TaskView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TreeView.resx">
+      <DependentUpon>TreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\user\MainDashboard_OLD.resx">
+      <DependentUpon>MainDashboard_OLD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\project\ProjectAdd.resx">
+      <DependentUpon>ProjectAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\project\ProjectView.resx">
+      <DependentUpon>ProjectView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\user\UserAdd.resx">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\user\UserView.resx">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CourseWork2.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CourseWork2_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>CourseWork2.mdf</DependentUpon>
+    </Content>
+    <Content Include="Y2K_DB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Y2K_DB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Y2K_DB.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
